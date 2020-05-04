@@ -1,5 +1,26 @@
 <!DOCTYPE html>
 <html>
-<meta charset = "utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personal Pok&eacute;dex</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body>
+    <div id="modal-container"></div>
+    <div class = "pokedex">
+      <h1 class="pokedex_logo">
+        <img src="img/Pokedex_logo.png" alt="Pokedx logo written in pokemon font">
+      </h1>
+      <div>
+        <ul class='pokeList'>
+        </ul>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script> 
+    <script src="js/promise-polyfill.js"></script>
+    <script src="js/fetch-polyfill.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
