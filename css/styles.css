@@ -4,6 +4,7 @@
 }
 
 body {
+  font-family: 'Press Start 2P', regular;
   background-color: #e31010;
   background-image: url('../img/background.jpg');
   background-position: center top;
@@ -16,7 +17,9 @@ body {
   min-width: 450px;
   display: inline-block;
   list-style-type: none;
-  border: 3px groove #e31010;
+  background-color: #fffff1;
+  border: 3px groove #157cd1;
+  border-radius: 10px;
   text-align: center;
 }
 
@@ -37,7 +40,7 @@ button.pokeButton {
 .pokedex_logo {
   display: inline-block;
   text-align: center;
-  margin-top: 6%;
+  margin-top: 10%;
 }
 
 .pokedex {
@@ -71,6 +74,8 @@ button.pokeButton {
   padding: 15px;
   width: 50%;
   max-width: 700px;
+  border: 4px ridge #157cd1;
+  border-radius: 10px;
 }
 
 .closePokemon {
@@ -80,11 +85,25 @@ button.pokeButton {
   background: none;
   color: #157cd1;
   font-size: 150%;
+  margin: 0 auto;
+  clear: both;
 }
 
 .pokeName {
   font-variant: small-caps;
-  margin-left: 25px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: auto;
+}
+
+.pokePic {
+  width: 70%;
+  padding: none;
+}
+
+.pokeHeight {
+  text-align: center;
+  margin-top: auto;
 }
 
 /* @media all and (max-width: 750px) {
