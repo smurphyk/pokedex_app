@@ -72,7 +72,6 @@ var pokemonRepository = (function() {
     $modalContainer.addClass('is-visible');
 
     var $modal = $('<div class="pokemodal"></div>');
-    var $modalDetails = $('<div class="pokeDetails"></div>')
 
     var $closeButton = $('<button></button>');
 
@@ -100,10 +99,9 @@ var pokemonRepository = (function() {
     */
 
     $modal.append($closeButton);
-    $modal.append($modalDetails);
-    $modalDetails.append($pokeName);
-    $modalDetails.append($pokePic);
-    $modalDetails.append($pokeHeight);
+    $modal.append($pokeName);
+    $modal.append($pokePic);
+    $modal.append($pokeHeight);
     //$modalDetails.append($pokeType);
     $modalContainer.append($modal);
   };
@@ -121,10 +119,22 @@ var pokemonRepository = (function() {
     $modalContainer.removeClass('is-visible');
   }
 
-/*  $('#modal-container').click(function() {
-    $('#modal-container').hide('.is-visible');
+  var modalContainer = $('#modal-container');
+  $(modalContainer).on('click', function (event) {
+    var target = $(event.target);
+    console.log(target + '' + modalContainer)
+    if(target.is(modalContainer)) {
+      hideModal();
+    }
   });
-*/
+
+  var modalContainer = $('#modal-container');
+  $(document).keydown(function (event) {
+    if (event.keyCode == 27) {
+      hideModal();
+    }
+  });
+
   // IIFE return Function
   return {
     add: add,
