@@ -9,14 +9,27 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
-    <div id="modal-container"></div>
-    <div class = "pokedex">
-      <h1 class="pokedex_logo">
-        <img src="img/Pokedex_logo.png" alt="Pokedx logo written in pokemon font">
-      </h1>
-      <div>
-        <ul class='pokeList'>
-        </ul>
+    <div class="modal fade" id="pokeModal" tabindex="-1" role="dialog" aria-labelledby="pokeModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="col modal-title" id="pokeModalLabel">...</h1>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="container">
+        <div class="row">
+          <div class="col"></div>
+            <div class="pokeList list-group" id="pokeDiv">
+            <ul class="pokeList list-unstyled col col-4 col text-center"></ul>
+          </div>
+        <div class="col"></div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"

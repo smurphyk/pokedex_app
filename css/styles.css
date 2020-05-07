@@ -8,11 +8,10 @@ body {
   background-attachment: fixed;
 }
 
-.pokeList {
+#pokeDiv {
   min-width: 450px;
   display: inline-block;
-  list-style-type: none;
-  background-color: #fffff1;
+  background-color: #a39f9e;
   border: 3px groove #157cd1;
   border-radius: 10px;
   text-align: center;
@@ -22,7 +21,6 @@ button.pokeButton {
   display: block;
   margin: 9px;
   margin-left: 33px;
-  width: 75%;
   min-width: 75%;
   height: 50px;
   font-size: 150%;
@@ -30,6 +28,7 @@ button.pokeButton {
   border: none;
   border-radius: 5px;
   background-color: #157cd1;
+  text-align: center;
 }
 
 .pokedex_logo {
@@ -61,7 +60,7 @@ button.pokeButton {
   text-align: center;
 }
 
-.pokemodal {
+#pokemodal .modal-title .modal-body {
   margin: auto;
   display: inline-block;
   box-sizing: border-box;
