@@ -8,120 +8,75 @@ body {
   background-attachment: fixed;
 }
 
-#pokeDiv {
-  min-width: 450px;
-  display: inline-block;
+.navbar {
+  margin-top: 4%;
+  margin-left: 8%;
+}
+
+.nav-item,
+.navbar-brand {
+  color: #e6c81e;
+}
+
+#pokeSearch {
+  margin-top: 5%;
+  width: 60%;
+}
+
+#topBack {
+  position: static;
+}
+
+#container {
+  width: 30vw;
+  display: block;
   background-color: #a39f9e;
   border: 3px groove #157cd1;
   border-radius: 10px;
   text-align: center;
+  position: static;
+}
+
+.pokeList {
+  text-align: center;
 }
 
 button.pokeButton {
-  display: block;
+  display: inline-block;
   margin: 9px;
-  margin-left: 33px;
   min-width: 75%;
   height: 50px;
   font-size: 150%;
   font-variant: small-caps;
-  border: none;
+  border: 2px solid #e31010;
   border-radius: 5px;
   background-color: #157cd1;
   text-align: center;
 }
 
-.pokedex_logo {
-  display: inline-block;
+#pokeLogo {
+  display: block;
+  margin-top: 5%;
+  position: static;
+}
+
+#pokeModal {
   text-align: center;
-  margin-top: 10%;
-}
-
-.pokedex {
-  text-align: center;
-}
-
-#modal-container {
-  display: none;
-}
-
-#modal-container.is-visible {
-  position: fixed;
-  padding: 20px;
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  overflow: auto;
-  display: grid;
-  text-align: center;
-}
-
-#pokemodal .modal-title .modal-body {
-  margin: auto;
-  display: inline-block;
   box-sizing: border-box;
   background: #e31010;
   padding: 15px;
-  width: 50%;
+  width: 33%;
+  height: auto;
   max-width: 700px;
   border: 4px ridge #157cd1;
   border-radius: 10px;
-}
-
-.closePokemon {
-  float: right;
-  -webkit-appearance: none;
-  border: 0;
-  background: none;
-  color: #157cd1;
-  font-size: 150%;
-  margin: 0 auto;
-  clear: both;
-}
-
-.pokeName {
   font-variant: small-caps;
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: auto;
+  margin-left: 33%;
+  margin-top: 25px;
+  position: fixed;
 }
 
 .pokePic {
   width: 70%;
   padding: 0;
 }
-
-.pokeHeight {
-  text-align: center;
-  margin-top: auto;
-}
-
-/* @media all and (max-width: 750px) {
-  .grid__item:last-child {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-}
-
-@media all and (min-width: 500px) and (max-width: 750px) {
-  .grid {
-    -ms-grid-columns: 1fr 15px;
-    grid-template-columns: 1fr;
-  }
-}
-
-@media all and (max-width: 500px) {
-  .grid {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-*/

@@ -16,7 +16,7 @@ var pokemonRepository = (function() {
   // Function for adding pokemon to list
   function addListItem(pokemon) {
     var $pokeList = $('.pokeList');
-    var $pokeButton = $('<button type="button" class = "pokeButton btn btn-lg button-class list-group-item text-center" data-target="#pokeModal" data-toggle="modal">'
+    var $pokeButton = $('<button type="button" class = "pokeButton btn btn-primary btn-lg button-class list-group-item text-center container-fluid" data-target="#pokeModal" data-toggle="modal">'
     + pokemon.name + '</button>');
 
     var $pokeItem = $("<li></li>");
@@ -58,7 +58,7 @@ var pokemonRepository = (function() {
     }).then(function(details) {
       item.imageUrl = details.sprites.front_default;
       item.height = details.height;
-      //item.types = Object.keys(details.types);
+      item.types = details.types;
     }).catch(function (e) {
       console.error(e);
     });
@@ -72,10 +72,10 @@ var pokemonRepository = (function() {
     $modalTitle.empty();
 
     var $pokeName = $('<h1>' + item.name + '</h1>');
-    var $pokeHeight = $('<h3>' + 'Height: ' + item.height + 'm' + '</h3>');
+    var $pokeHeight = $('<h4>' + 'Height: ' + item.height + 'm' + '</h4>');
     var $pokePic = $('<img class="pokePic">');
     $pokePic.attr('src', item.imageUrl);
-    var $pokeType = $('<h3>' + 'Types: ' + item.types + '</h3>');
+    var $pokeType = $('<h4>' + 'Types: ' + item.types + '</h4>');
 
     $modalTitle.append($pokeName);
     $modalBody.append($pokePic);
@@ -83,28 +83,6 @@ var pokemonRepository = (function() {
     $modalBody.append($pokeType);
     }
 
-  // create hideModal function
-/*  function hideModal() {
-    var $modalContainer = $('#modal-container');
-    $modalContainer.removeClass('is-visible');
-  }
-
-  var modalContainer = $('#modal-container');
-  $(modalContainer).on('click', function (event) {
-    var target = $(event.target);
-    console.log(target + '' + modalContainer)
-    if(target.is(modalContainer)) {
-      hideModal();
-    }
-  });
-
-  var modalContainer = $('#modal-container');
-  $(document).keydown(function (event) {
-    if (event.keyCode == 27) {
-      hideModal();
-    }
-  });
-*/
   // IIFE return Function
   return {
     add: add,
@@ -123,3 +101,20 @@ pokemonRepository.loadList().then(function() {
     pokemonRepository.addListItem(pokemon);
     });
   });
+
+// Search NavBar
+$(document).ready(function() {
+  $("#pokeSearch").on("keyup", function() {
+    var value = $(this)
+      .val()
+      .toLowerCase();
+  $("pokeDiv *").filter(function() {
+    $(this).toggle(
+      $(this)
+        .text()
+        .toLowerCase()
+        .indexOf(value) > -1
+      );
+    });
+  });
+});
