@@ -103,7 +103,7 @@ pokemonRepository.loadList().then(function() {
   });
 
 // Search NavBar
-$(document).ready(function() {
+/* $(document).ready(function() {
   $("#pokeSearch").on("keyup", function() {
     var value = $(this)
       .val()
@@ -118,3 +118,4 @@ $(document).ready(function() {
     });
   });
 });
+*/
