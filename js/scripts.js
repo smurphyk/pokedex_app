@@ -77,6 +77,8 @@ var pokemonRepository = (function() {
     $pokePic.attr('src', item.imageUrl);
     var $pokeType = $('<h4>' + 'Types: ' + item.types + '</h4>');
 
+    $modalBody.addClass('container-fluid');
+    $modalTitle.addClass('container-fluid');
     $modalTitle.append($pokeName);
     $modalBody.append($pokePic);
     $modalBody.append($pokeHeight);
