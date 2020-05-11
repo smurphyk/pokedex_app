@@ -100,7 +100,7 @@ pokemonRepository.loadList().then(function() {
   pokemonRepository.getAll().forEach(function(pokemon) {
     pokemonRepository.addListItem(pokemon);
     });
-  });
+  })
 
 // Search NavBar
 /* $(document).ready(function() {
