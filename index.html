@@ -12,31 +12,29 @@
   <body>
     <a id="topBack" name="top"></a>
     <!--NavBar-->
-    <div class="container-fluid mt-10">
-      <nav class="navbar navbar-expand-lg">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    <div class="container-fluid" id="navWrap">
+      <nav class="navbar navbar-light navbar-expand-lg topbar row">
+        <div class="col-2 col-sm-1 navButton">
+          <button class="navbar-toggler navbar-toggler-left mt-5" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
           aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="navbar-nav mr-auto">
-              <a class="navbar-brand" href="https://smurphyk.github.io/portfolio-website" target="_blank">Sean Murphy<span class="sr-only">(current)</span>
-              </a>
-              <a class="nav-item nav-link active" href="#">Contact Developer</a>
-            </div>
-     <!-- Search Bar -->
-          <div class="navbar-nav ml-auto">
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" id="pokeSearch" type="search" autocomplete="off" placeholder="Search Pokemon" aria-label="Search"/>
-              <button class="btn my-2 my-sm-0 clear" type="submit">Reset</button>
-            </form>
-          </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="https://smurphyk.github.io/pokedex_app">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Developer</a>
+            </li>
+          </ul>
         </div>
       </nav>
     </div>
     <!-- Modal -->
     <div class="modal fade container-fluid" id="pokeModal" tabindex="-1" role="dialog" aria-labelledby="pokeModal" aria-hidden="true">
-      <div class="pokeDialog container-fluid" role="document">
+      <div class="modal-dialog container-fluid" role="document">
         <div class="modal-content container-fluid">
           <div class="modal-header container-fluid">
             <h2 class="modal-title container-fluid" id="pokeModalLabel">Modal Title</h2>

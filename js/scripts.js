@@ -71,14 +71,12 @@ var pokemonRepository = (function() {
     $modalBody.empty();
     $modalTitle.empty();
 
-    var $pokeName = $('<h1>' + item.name + '</h1>');
+    var $pokeName = $('<h2>' + item.name + '</h2>');
     var $pokeHeight = $('<h4>' + 'Height: ' + item.height + 'm' + '</h4>');
     var $pokePic = $('<img class="pokePic">');
     $pokePic.attr('src', item.imageUrl);
     var $pokeType = $('<h4>' + 'Types: ' + item.types + '</h4>');
 
-    $modalBody.addClass('container-fluid');
-    $modalTitle.addClass('container-fluid');
     $modalTitle.append($pokeName);
     $modalBody.append($pokePic);
     $modalBody.append($pokeHeight);
