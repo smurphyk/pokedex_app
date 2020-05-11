@@ -8,14 +8,8 @@ body {
   background-attachment: fixed;
 }
 
-.navbar {
-  margin-top: 4%;
-  margin-left: 8%;
-}
-
-.nav-item,
-.navbar-brand {
-  color: #e6c81e;
+#navWrap {
+  margin-top: 5%;
 }
 
 #pokeSearch {
@@ -61,6 +55,7 @@ button.pokeButton {
   position: static;
 }
 
+/*
 #pokeModal {
   text-align: center;
   box-sizing: border-box;
@@ -75,6 +70,7 @@ button.pokeButton {
   margin-left: 25%;
   margin-top: 25px;
 }
+*/
 
 .pokePic {
   width: 70%;
